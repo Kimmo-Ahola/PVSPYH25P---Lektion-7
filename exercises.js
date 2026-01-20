@@ -240,6 +240,40 @@ function calculator(a, b, operator) {
     }
 }
 
+// 21. Skriv en funktion getSeasonSwedish som tar en månad (1-12) och returnerar vilken årstid
+// det är i Sverige (vår: 3-5, sommar: 6-8, höst: 9-11, vinter: 12,1-2).
+
+function getSeasonSwedish(month){
+    switch(month){
+        case month > 3 && month <= 5:
+            return "spring";
+        case month > 5 && month <= 8:
+            return "summer";
+        case month > 8 && month <= 11:
+            return "autumn";
+        default:
+            return "winter";
+    }
+}
+
+// 22. kapa en funktion getGradePoint som tar ett bokstavsbetyg ("A"-"F") och returnerar poäng
+// (A=5, B=4, C=3, D=2, E=1, F=0).
+
+function getGradePoint(grade){
+    if (grade === "A") {
+        return 5;
+    } else if (grade === "B"){
+        return 4;
+    } else if (grade === "C") {
+        return 3;
+    } else if (grade === "D") {
+        return 2;
+    } else if (grade === "E") {
+        return 1;
+    } else {
+        return 0;
+    }
+}
 
 
 // 23. Skriv en funktion sumArray som tar en array av nummer och returnerar summan av alla element.
