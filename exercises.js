@@ -47,14 +47,12 @@ function maxOfTwo(first, second){
 // 8. Skapa en funktion checkAge som tar en ålder och returnerar "Barn" (0-12), "Tonåring" (13-19), eller "Vuxen" (20+).
 
 function checkAge(age){
-    switch(age){
-        case age > 0 && age <= 12:
-            return "Barn";
-        case age > 12 && age <= 19:
-            return "Tonåring";
-        case age > 19:
-            return "Vuxen";
-    }
+    if (age > 0 && age <= 12)
+        return "Barn";
+    if (age > 12 && age <= 19)
+        return "Tonåring";
+    if (age > 19)
+        return "Vuxen";
 }
 
 // 9. kriv en funktion canVote som tar ålder och land ("SE" eller "US") som parametrar.
@@ -244,17 +242,22 @@ function calculator(a, b, operator) {
 // det är i Sverige (vår: 3-5, sommar: 6-8, höst: 9-11, vinter: 12,1-2).
 
 function getSeasonSwedish(month){
-    switch(month){
-        case month > 3 && month <= 5:
-            return "spring";
-        case month > 5 && month <= 8:
-            return "summer";
-        case month > 8 && month <= 11:
-            return "autumn";
-        default:
-            return "winter";
-    }
+    if (month >= 3 && month <= 5)
+        return "spring";
+    if (month > 5 && month <= 8)
+        return "summer";
+    if (month > 8 && month <= 11)
+        return "autumn";
+    return "winter";
 }
+
+console.log(getSeasonSwedish(3))
+console.log(getSeasonSwedish(6))
+console.log(getSeasonSwedish(9))
+console.log(getSeasonSwedish(12))
+console.log(getSeasonSwedish(1))
+console.log(getSeasonSwedish(2))
+
 
 // 22. kapa en funktion getGradePoint som tar ett bokstavsbetyg ("A"-"F") och returnerar poäng
 // (A=5, B=4, C=3, D=2, E=1, F=0).
