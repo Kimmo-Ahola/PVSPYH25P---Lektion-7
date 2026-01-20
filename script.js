@@ -1,9 +1,10 @@
 "use strict";
 // modules are more modern than normal script files
-import {add} from '/module.js'
+// use this 
+import {add} from './module.js'
 // kommentar
 console.log("Hello, world!");
-// Vi ska aldrig använda var
+// Vi ska aldrig använda var eftersom det finns risk att den blir "global"
 var neverUseThis = 2;
 
 // camelcase
@@ -138,6 +139,10 @@ class Person{
 }
 
 let jsObject = {name:"name", age:34};
+let nestedJsObject = {name:"Kimmo", age:34, transactions:[
+    {amount:3000},
+    {amount:5000}
+]}
 
 let myPerson = new Person("Kimmo", 34);
 console.log(myPerson);
